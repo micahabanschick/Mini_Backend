@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_23_021541) do
+ActiveRecord::Schema.define(version: 2021_06_23_024233) do
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 2021_06_23_021541) do
     t.string "name"
     t.string "password"
     t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "wallets", force: :cascade do |t|
+    t.integer "credits"
+    t.integer "tickets"
+    t.integer "points"
+    t.integer "uid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
